@@ -1,0 +1,38 @@
+<h2>Example Truffle Dapp: Metacoin</h2>
+<h3>You have 
+	<span class="black">
+		<span id="balance">{{balance}}</span> META
+	</span>
+</h3>
+
+<form class="form-horizontal" role="form">
+	<div class="form-group">
+		<div class="col-xs-2"></div>
+		<div class="col-lg-10">
+			<h2>Send MetaCoin</h2>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-xs-2" for="amount">Amount:</label>
+		<div class="col-lg-10">
+			<input #amount class="form-control" type="text" id="amount" name="amount" placeholder="e.g., 95">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-xs-2" for="receiver">To Address:</label>
+		<div class="col-lg-10">
+			<input #receiver class="form-control" type="text" id="receiver" name="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-xs-2" for="receiver">Status:</label>
+		<div class="col-lg-10">
+    	<p class="form-control-static">{{status}}</p>
+    </div>
+	</div>
+	<div class="form-group">
+  	<div class="col-xs-offset-2 col-xs-10">
+      <button class="btn btn-primary" id="send" (click)="sendCoin(amount.value, receiver.value); amount.value=''; receiver.value=''" type="button">Send MetaCoin</button>
+    </div>
+  </div>
+</form>
