@@ -1,6 +1,11 @@
 # truffle-init-angular
 Example Truffle project integrated with Angular. Includes contracts, migrations, tests, user interface and Angular build pipeline.
 
+## Pre-requisites
+
+Truffle. See: http://truffleframework.com/
+An ethereum client. See: http://truffleframework.com/docs/getting_started/client
+
 ## Usage
 
 To initialize a project with this example, clone the project and run `npm install`.
