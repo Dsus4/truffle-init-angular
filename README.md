@@ -30,3 +30,8 @@ Project based on:
 https://github.com/trufflesuite/truffle-init-webpack
 
 https://github.com/angular/quickstart
+
+
+## Windows known issue
+
+Note that running truffle build (or npm start) using bash for windows will fail. Use windows command line instead
