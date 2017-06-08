@@ -18,5 +18,7 @@ To compile new smart contracts and expose them to the app, store them in the 'co
 ## References
 
 Project based on:
+
 https://github.com/trufflesuite/truffle-init-webpack
+
 https://github.com/angular/quickstart
