@@ -3,6 +3,8 @@ Example Truffle project integrated with Angular. Includes contracts, migrations,
 
 ## Pre-requisites
 
+Node v.6+ and npm v.3+
+
 Truffle. See: http://truffleframework.com/
 
 An ethereum client. See: http://truffleframework.com/docs/getting_started/client
