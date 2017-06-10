@@ -1,3 +1,12 @@
 .right {
   float: right !important;
 }
+
+.spinner-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.spinner {
+  margin: 15%
+}
