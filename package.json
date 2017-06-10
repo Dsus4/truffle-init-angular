@@ -4,10 +4,11 @@
   "description": "Truffle - Angular integration boilerplate",
   "scripts": {
     "test:once": "karma start karma.conf.js --single-run",
+    "prebuild": "npm run ts-export-json-files",
     "build": "tsc -p src/",
     "serve": "lite-server -c=bs-config.json",
     "prestart": "npm run build",
-    "start": "concurrently \"npm run ts-export-json-files\" \"npm run build:watch\" \"npm run serve\"",
+    "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
     "pretest": "npm run build",
     "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "pretest:once": "npm run build",
