@@ -1,6 +1,7 @@
 const path 			= require('path');
 const fs 				= require('fs');
 const writeFile = require('write');
+const exec 			= require('child_process').exec;
 
 const ENCODING 	= 'utf8';
 const SRC_EXT 	= '.json';
@@ -33,11 +34,18 @@ let jsonTsify = (srcFile, dstDir) => {
 
 let notExcluded = (name) => {
 	return !SRC_EXC.includes(name);
-}
+};
 
-fs.readdir(SRC_DIR, (err, files) => {
-	if (err) throw err;
-  files.filter(notExcluded).forEach(file => {
-    jsonTsify(path.join(SRC_DIR, file), DST_DIR);
-  });
+let jsonTsifyDir = (src, dst) => {
+	fs.readdir(src, (err, files) => {
+		if (err) throw err;
+	  files.filter(notExcluded).forEach(file => {
+	    jsonTsify(path.join(src, file), dst);
+	  });
+	});
+};
+
+exec('rm -r ' + DST_DIR, function (err, stdout, stderr) {
+  if (err) console.log(err);
+	else jsonTsifyDir(SRC_DIR, DST_DIR);
 });
